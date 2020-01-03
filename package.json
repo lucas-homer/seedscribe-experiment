@@ -5,10 +5,14 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@reach/dialog": "^0.7.0",
+    "@reach/tabs": "^0.7.0",
+    "@reach/visually-hidden": "^0.7.0",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
+    "gatsby-plugin-create-client-paths": "^2.1.20",
     "gatsby-plugin-manifest": "^2.2.31",
-    "gatsby-plugin-netlify-identity-widget": "^1.1.1",
+    "gatsby-plugin-netlify-identity": "^0.0.3",
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-sharp": "^2.3.5",
@@ -17,9 +21,11 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-netlify-identity-widget": "^0.2.5"
   },
   "devDependencies": {
+    "netlify-lambda": "^1.6.3",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -27,6 +33,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "postinstall": "netlify-lambda install",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
