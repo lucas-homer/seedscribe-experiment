@@ -29,6 +29,7 @@ function Main() {
             'your origin is "http://localhost:8000". You are likely not using Netlify Dev so the functions server isnt running. Please read the docs, use Netlify Dev, and go to http://localhost:8888'
           )
         else setErr(err)
+        setLoading(false)
         throw err
       })
   }
